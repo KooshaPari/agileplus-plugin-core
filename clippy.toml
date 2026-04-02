@@ -1,0 +1,3 @@
+# Clippy configuration for agileplus-plugin-core
+
+avoid-breaking-exported-api = false
