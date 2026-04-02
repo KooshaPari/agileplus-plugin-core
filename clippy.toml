@@ -2,37 +2,16 @@
 # Phenotype Standard - Do not modify directly
 # Inherit from phenotype-governance/configs/rust/
 
-[workspace]
+msrv = "1.75.0"
 
-# Lint rules that agents must follow
-[lints.rust]
-workspace = true
+# Pedantic lints for high quality code
+cognitive-complexity-threshold = 15
+too-many-arguments-threshold = 6
+type-complexity-threshold = 500
+too-many-lines-threshold = 500
 
-# Cargo clippy configuration
-[workspace.metadata.clippy]
-# Critical lints that must pass
-deny = [
-    "clippy::all",
-    "clippy::correctness",
-    "clippy::suspicious",
-]
+# Disallowed identifiers in the codebase
+disallowed-names = ["foo", "bar", "baz", "quux", "toto", "tata"]
 
-# Warn on these (not deny)
-warn = [
-    "clippy::complexity",
-    "clippy::perf",
-    "clippy::style",
-    "clippy::pedantic",
-]
-
-# Allow these exceptions
-allow = [
-    "clippy::module_name_repetitions",  # Often intentional in domain models
-    "clippy::too_many_arguments",       # Sometimes necessary for constructors
-]
-
-# Edition 2021 minimum
-rust-version = "1.70"
-
-# File size limits
-max-spec-recursion-depth = 10
+# Prefer explicit wildcard imports
+warn-on-all-wildcard-imports = true
