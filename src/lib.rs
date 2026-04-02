@@ -48,9 +48,13 @@
 //! - `runtime-tokio`: Enable async runtime support (default)
 
 pub mod error;
+pub mod lifecycle;
 pub mod registry;
 pub mod traits;
+pub mod versioning;
 
 pub use error::PluginError;
+pub use lifecycle::PluginState;
 pub use registry::PluginRegistry;
 pub use traits::{AdapterPlugin, StoragePlugin, VcsPlugin};
+pub use versioning::{PluginApiVersion, VersionCompatibility};

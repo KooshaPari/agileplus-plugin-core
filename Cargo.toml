@@ -2,9 +2,11 @@
 name = "agileplus-plugin-core"
 description = "Core plugin traits and registry for AgilePlus extensibility"
 version = "0.1.1"
-edition = "2024"
+edition = "2021"
 license = "MIT"
-rust-version = "1.86"
+rust-version = "1.75"
+
+[workspace]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }

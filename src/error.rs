@@ -34,6 +34,12 @@ pub enum PluginError {
 
     #[error("Validation error: {0}")]
     Validation(String),
+
+    #[error("Plugin lifecycle error: {0}")]
+    Lifecycle(String),
+
+    #[error("Plugin version incompatibility: {0}")]
+    Version(String),
 }
 
 /// Result type alias for plugin operations.
